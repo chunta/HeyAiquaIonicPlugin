@@ -2,10 +2,16 @@ PODS:
   - Capacitor (2.0.2):
     - CapacitorCordova (= 2.0.2)
   - CapacitorCordova (2.0.2)
+  - HeyRexLib (0.6.1)
 
 DEPENDENCIES:
   - "Capacitor (from `../node_modules/@capacitor/ios`)"
   - "CapacitorCordova (from `../node_modules/@capacitor/ios`)"
+  - HeyRexLib
+
+SPEC REPOS:
+  trunk:
+    - HeyRexLib
 
 EXTERNAL SOURCES:
   Capacitor:
@@ -16,7 +22,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Capacitor: 8197af225080b4135ad39d76ae44cd0b8dc87519
   CapacitorCordova: e45e617a0b5fe6a27f7b822b2014f9c12e8a8198
+  HeyRexLib: 99df54e16d82039b5005f4968993664bd7df0dee
 
-PODFILE CHECKSUM: 18edf3816e869cc37578950affc00fdd78ee0dcb
+PODFILE CHECKSUM: 905d1b2dbec4c58918def984f39591dab6556488
 
 COCOAPODS: 1.9.1
