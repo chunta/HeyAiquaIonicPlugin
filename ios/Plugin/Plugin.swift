@@ -10,10 +10,18 @@ public class HeyAiquaIonicPlugin: CAPPlugin {
 
     @objc func echo(_ call: CAPPluginCall) {
         let value = call.getString("value") ?? ""
-
-        QGSdk.getSharedInstance().logEvent("233")
         call.success([
             "value": value
         ])
+    }
+    
+    @objc func start(_ call: CAPPluginCall) {
+        let appid = call.getString("appid") ?? ""
+        QGSdk.getSharedInstance().onStart(appid, setDevProfile: true)
+    }
+    
+    @objc func log(_ call: CAPPluginCall) {
+        let value = call.getString("name") ?? ""
+        QGSdk.getSharedInstance().logEvent(value)
     }
 }
