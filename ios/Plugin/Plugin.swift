@@ -10,6 +10,7 @@ public class HeyAiquaIonicPlugin: CAPPlugin {
 
     @objc func echo(_ call: CAPPluginCall) {
         let value = call.getString("value") ?? ""
+        print("value ", value)
         call.success([
             "value": value
         ])
@@ -17,11 +18,19 @@ public class HeyAiquaIonicPlugin: CAPPlugin {
     
     @objc func start(_ call: CAPPluginCall) {
         let appid = call.getString("appid") ?? ""
+        print("appid ", appid)
         QGSdk.getSharedInstance().onStart(appid, setDevProfile: true)
+        call.success([
+                   "appid": appid
+               ])
     }
     
     @objc func log(_ call: CAPPluginCall) {
-        let value = call.getString("name") ?? ""
-        QGSdk.getSharedInstance().logEvent(value)
+        let name = call.getString("name") ?? ""
+        print("name ", name)
+        QGSdk.getSharedInstance().logEvent(name)
+        call.success([
+                    "name": name
+                ])
     }
 }
