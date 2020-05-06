@@ -9,4 +9,14 @@ export interface HeyAiquaIonicPluginPlugin {
     }): Promise<{
         value: string;
     }>;
+    start(options: {
+        appid: string;
+    }): Promise<{
+        appid: string;
+    }>;
+    log(options: {
+        name: string;
+    }): Promise<{
+        name: string;
+    }>;
 }

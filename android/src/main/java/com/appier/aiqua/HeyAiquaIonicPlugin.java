@@ -17,4 +17,20 @@ public class HeyAiquaIonicPlugin extends Plugin {
         ret.put("value", value);
         call.success(ret);
     }
+
+    public void start(PluginCall call) {
+        String appid = call.getString("appid");
+
+        JSObject ret = new JSObject();
+        ret.put("value", appid);
+        call.success(ret);
+    }
+
+    public void log(PluginCall call) {
+        String name = call.getString("name");
+
+        JSObject ret = new JSObject();
+        ret.put("value", name);
+        call.success(ret);
+    }
 }
