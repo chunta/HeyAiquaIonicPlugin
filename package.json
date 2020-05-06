@@ -1,6 +1,6 @@
 {
   "name": "heyaiquaionicplugin",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Aiqua Ionic Plugin",
   "main": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",

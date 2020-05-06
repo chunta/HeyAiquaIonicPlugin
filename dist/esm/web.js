@@ -17,19 +17,6 @@ export class HeyAiquaIonicPluginWeb extends WebPlugin {
     }
     echo(options) {
         return __awaiter(this, void 0, void 0, function* () {
-            //console.log('ECHO', options);
-            return options;
-        });
-    }
-    start(options) {
-        return __awaiter(this, void 0, void 0, function* () {
-            //console.log('START', options);
-            return options;
-        });
-    }
-    log(options) {
-        return __awaiter(this, void 0, void 0, function* () {
-            //console.log('LOG', options);
             return options;
         });
     }
