@@ -30,6 +30,11 @@ export class HeyAiquaIonicPluginWeb extends WebPlugin {
             return options;
         });
     }
+    setToken(options) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return options;
+        });
+    }
 }
 const HeyAiquaIonicPlugin = new HeyAiquaIonicPluginWeb();
 export { HeyAiquaIonicPlugin };

@@ -20,6 +20,10 @@ export class HeyAiquaIonicPluginWeb extends WebPlugin implements HeyAiquaIonicPl
   async log(options: { name: string }): Promise<{name: string}> {
     return options;
   }
+
+  async setToken(options: { token: string }): Promise<{token: string}> {
+    return options;
+  }
 }
 
 const HeyAiquaIonicPlugin = new HeyAiquaIonicPluginWeb();

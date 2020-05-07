@@ -19,4 +19,9 @@ export interface HeyAiquaIonicPluginPlugin {
     }): Promise<{
         name: string;
     }>;
+    setToken(options: {
+        token: string;
+    }): Promise<{
+        token: string;
+    }>;
 }

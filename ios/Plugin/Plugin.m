@@ -7,4 +7,5 @@ CAP_PLUGIN(HeyAiquaIonicPlugin, "HeyAiquaIonicPlugin",
            CAP_PLUGIN_METHOD(echo, CAPPluginReturnPromise);
            CAP_PLUGIN_METHOD(start, CAPPluginReturnPromise);
            CAP_PLUGIN_METHOD(log, CAPPluginReturnPromise);
+           CAP_PLUGIN_METHOD(setToken, CAPPluginReturnPromise);
 )

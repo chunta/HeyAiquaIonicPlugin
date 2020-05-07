@@ -17,6 +17,11 @@ export declare class HeyAiquaIonicPluginWeb extends WebPlugin implements HeyAiqu
     }): Promise<{
         name: string;
     }>;
+    setToken(options: {
+        token: string;
+    }): Promise<{
+        token: string;
+    }>;
 }
 declare const HeyAiquaIonicPlugin: HeyAiquaIonicPluginWeb;
 export { HeyAiquaIonicPlugin };
