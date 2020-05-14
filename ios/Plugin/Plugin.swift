@@ -29,9 +29,10 @@ public class HeyAiquaIonicPlugin: CAPPlugin {
 
     @objc func log(_ call: CAPPluginCall) {
         let name = call.getString("name") ?? ""
+        let parm = call.getObject("parm") ?? [:]
         print("name", name)
         DispatchQueue.main.async {
-            QGSdk.getSharedInstance().logEvent(name)
+            QGSdk.getSharedInstance().logEvent(name, withParameters: parm)
         }
         call.success([
             "name": name
