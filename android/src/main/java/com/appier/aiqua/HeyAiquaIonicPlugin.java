@@ -34,7 +34,7 @@ public class HeyAiquaIonicPlugin extends Plugin {
         call.success(ret);
     }
 
-    public void setToken(PluginCall call) {
+    public void intoken(PluginCall call) {
         String token = call.getString("token");
 
         JSObject ret = new JSObject();
