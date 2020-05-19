@@ -4,9 +4,7 @@ export declare class HeyAiquaIonicPluginWeb extends WebPlugin implements HeyAiqu
     constructor();
     echo(options: {
         value: string;
-    }): Promise<{
-        value: string;
-    }>;
+    }): Promise<void>;
     start(options: {
         appid: string;
     }): Promise<{

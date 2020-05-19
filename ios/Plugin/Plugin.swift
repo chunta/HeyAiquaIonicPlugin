@@ -11,9 +11,7 @@ public class HeyAiquaIonicPlugin: CAPPlugin {
     @objc func echo(_ call: CAPPluginCall) {
         let value = call.getString("value") ?? ""
         print("Native Swift", value)
-        call.success([
-            "value": value
-        ])
+        call.resolve()
     }
 
     @objc func start(_ call: CAPPluginCall) {

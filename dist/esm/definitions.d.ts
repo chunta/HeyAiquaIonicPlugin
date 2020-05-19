@@ -6,9 +6,7 @@ declare module "@capacitor/core" {
 export interface HeyAiquaIonicPluginPlugin {
     echo(options: {
         value: string;
-    }): Promise<{
-        value: string;
-    }>;
+    }): Promise<void>;
     start(options: {
         appid: string;
     }): Promise<{

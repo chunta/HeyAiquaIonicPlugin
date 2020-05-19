@@ -9,8 +9,10 @@ export class HeyAiquaIonicPluginWeb extends WebPlugin implements HeyAiquaIonicPl
     });
   }
 
-  async echo(options: { value: string }): Promise<{value: string}> {
-    return options;
+  async echo(options: { value: string }): Promise<void> {
+    //return options;
+    console.log(options);
+    return;
   }
 
   async start(options: { appid: string }): Promise<{appid: string}> {
