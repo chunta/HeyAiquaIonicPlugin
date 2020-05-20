@@ -15,11 +15,11 @@ export class HeyAiquaIonicPluginWeb extends WebPlugin {
             platforms: ['web']
         });
     }
-    echo(options) {
+    echo(_) {
         return __awaiter(this, void 0, void 0, function* () {
             //return options;
-            console.log(options);
-            return;
+            //console.log(value);
+            // return;
         });
     }
     start(options) {
