@@ -1,6 +1,6 @@
 import Foundation
 import Capacitor
-import HeyRexLib
+import AIRexLib
 /**
  * Please read the Capacitor iOS Plugin Development Guide
  * here: https://capacitor.ionicframework.com/docs/plugins/ios
