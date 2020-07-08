@@ -1,6 +1,5 @@
 import Foundation
 import Capacitor
-import AIRexLib
 /**
  * Please read the Capacitor iOS Plugin Development Guide
  * here: https://capacitor.ionicframework.com/docs/plugins/ios
@@ -19,10 +18,12 @@ public class HeyAiquaIonicPlugin: CAPPlugin {
         print("appid", appid)
         DispatchQueue.main.async {
             QGSdk.getSharedInstance().onStart(appid, setDevProfile: true)
+            AIDManager.instance().initWithApiKey("aideal-mobile-qa")
         }
         call.success([
             "appid": appid
         ])
+        
     }
 
     @objc func log(_ call: CAPPluginCall) {
