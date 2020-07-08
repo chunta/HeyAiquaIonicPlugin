@@ -11,5 +11,5 @@
     s.ios.deployment_target  = '11.0'
     s.dependency 'Capacitor'
     s.dependency 'AIRexLib'
-    s.static_framework = true
+    #s.static_framework = true
   end
