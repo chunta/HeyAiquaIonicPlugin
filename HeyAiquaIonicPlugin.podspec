@@ -1,7 +1,7 @@
 
   Pod::Spec.new do |s|
     s.name = 'Heyaiquaionicplugin'
-    s.version = '0.0.40'
+    s.version = '0.0.41'
     s.summary = 'Aiqua Ionic Plugin'
     s.license = 'MIT'
     s.homepage = 'https://github.com/chunta/HeyAiquaIonicPlugin.git'
