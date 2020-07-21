@@ -18,7 +18,6 @@ export class HeyAiquaIonicPluginWeb extends WebPlugin {
     // Rex
     echo(options) {
         return __awaiter(this, void 0, void 0, function* () {
-            console.log(value);
             return options;
         });
     }
@@ -34,7 +33,6 @@ export class HeyAiquaIonicPluginWeb extends WebPlugin {
     }
     log(options) {
         return __awaiter(this, void 0, void 0, function* () {
-            console.log(name);
             return options;
         });
     }

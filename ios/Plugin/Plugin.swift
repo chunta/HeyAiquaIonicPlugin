@@ -7,24 +7,12 @@ import Appier
  */
 @objc(HeyAiquaIonicPlugin)
 public class HeyAiquaIonicPlugin: CAPPlugin {
-    
+
     /// Rex Addon
     @objc func echo(_ call: CAPPluginCall) {
         let value = call.getString("value") ?? ""
         print("Native Swift", value)
         call.resolve()
-    }
-
-    @objc func start(_ call: CAPPluginCall) {
-        let appid = call.getString("appid") ?? ""
-        print("appid", appid)
-        DispatchQueue.main.async {
-            QGSdk.getSharedInstance().onStart(appid, setDevProfile: true)
-            AIDManager.instance().initWithApiKey("aideal-mobile-qa")
-        }
-        call.success([
-            "appid": appid
-        ])
     }
 
     @objc func log(_ call: CAPPluginCall) {
@@ -49,7 +37,7 @@ public class HeyAiquaIonicPlugin: CAPPlugin {
             "token": token
         ])
     }
-    
+
     /// Appier Official
     @objc func configure(_ call: CAPPluginCall) {
         guard let appId = call.options["appId"] as? String else {

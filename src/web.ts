@@ -14,10 +14,6 @@ export class HeyAiquaIonicPluginWeb extends WebPlugin implements HeyAiquaIonicPl
       return options;
   }
 
-  async start(options: { appid: string }): Promise<{appid: string}> {
-      return options;
-  }
-
   async setToken(options: { token: string }): Promise<{token: string}> {
       return options;
   }
