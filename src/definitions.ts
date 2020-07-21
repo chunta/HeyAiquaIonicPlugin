@@ -7,7 +7,7 @@ declare module "@capacitor/core" {
 export interface HeyAiquaIonicPluginPlugin {
 
   //Rex Utility
-  echo(options: { value: string }): Promise<void>;
+  echo(options: { value: string }): Promise<{value: string}>;
   start(options: { appid: string }): Promise<{appid: string}>;
   setToken(options: { token: string }): Promise<{token: string}>;
   log(options: { name: string }): Promise<{name: string}>;

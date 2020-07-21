@@ -16,7 +16,7 @@ export class HeyAiquaIonicPluginWeb extends WebPlugin {
         });
     }
     // Rex
-    echo(_) {
+    echo(options) {
         return __awaiter(this, void 0, void 0, function* () {
             console.log(value);
             return options;
