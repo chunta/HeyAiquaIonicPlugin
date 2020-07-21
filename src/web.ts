@@ -9,6 +9,12 @@ export class HeyAiquaIonicPluginWeb extends WebPlugin implements HeyAiquaIonicPl
     });
   }
 
+  // Rex
+  async echo(_: { value: string }): Promise<void> {
+      console.log(value);
+      return options;
+  }
+
   async start(options: { appid: string }): Promise<{appid: string}> {
       return options;
   }
@@ -17,12 +23,12 @@ export class HeyAiquaIonicPluginWeb extends WebPlugin implements HeyAiquaIonicPl
       return options;
   }
 
-  async echo(_: { value: string }): Promise<void> {
-      console.log(value);
-      return options;
+  async log(options: { name: string }): Promise<{name: string}> {
+     console.log(name);
+     return options;
   }
 
-  // init sdk
+  // Appier
   async configure(_: {
     appId: string;
     senderId?: string;

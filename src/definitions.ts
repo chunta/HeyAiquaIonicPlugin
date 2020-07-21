@@ -7,10 +7,11 @@ declare module "@capacitor/core" {
 export interface HeyAiquaIonicPluginPlugin {
 
   //Rex Utility
+  echo(options: { value: string }): Promise<void>;
   start(options: { appid: string }): Promise<{appid: string}>;
   setToken(options: { token: string }): Promise<{token: string}>;
-  echo(options: { value: string }): Promise<void>;
-  
+  log(options: { name: string }): Promise<{name: string}>;
+
   // init the Appier Plugin first
   configure(options: {
     appId: string;
