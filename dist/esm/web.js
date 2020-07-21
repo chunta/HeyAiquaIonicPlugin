@@ -1,3 +1,12 @@
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 import { WebPlugin } from '@capacitor/core';
 export class HeyAiquaIonicPluginWeb extends WebPlugin {
     constructor() {
@@ -6,123 +15,116 @@ export class HeyAiquaIonicPluginWeb extends WebPlugin {
             platforms: ['web']
         });
     }
+    // Rex
+    echo(options) {
+        return __awaiter(this, void 0, void 0, function* () {
+            console.log(value);
+            return options;
+        });
+    }
+    start(options) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return options;
+        });
+    }
+    setToken(options) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return options;
+        });
+    }
+    log(options) {
+        return __awaiter(this, void 0, void 0, function* () {
+            console.log(name);
+            return options;
+        });
+    }
+    // Appier
+    configure(_) {
+        return __awaiter(this, void 0, void 0, function* () {
+            /* do nothing. */
+        });
+    }
+    setUniversalLinkDomains(_) {
+        return __awaiter(this, void 0, void 0, function* () {
+            /* do nothing. */
+        });
+    }
+    logEvent(_) {
+        return __awaiter(this, void 0, void 0, function* () {
+            /* do nothing. */
+        });
+    }
+    flush() {
+        return __awaiter(this, void 0, void 0, function* () {
+            /* do nothing. */
+        });
+    }
+    setUserId(_) {
+        return __awaiter(this, void 0, void 0, function* () {
+            /* do nothing. */
+        });
+    }
+    setName(_) {
+        return __awaiter(this, void 0, void 0, function* () {
+            /* do nothing. */
+        });
+    }
+    setFirstName(_) {
+        return __awaiter(this, void 0, void 0, function* () {
+            /* do nothing. */
+        });
+    }
+    setLastName(_) {
+        return __awaiter(this, void 0, void 0, function* () {
+            /* do nothing. */
+        });
+    }
+    setCity(_) {
+        return __awaiter(this, void 0, void 0, function* () {
+            /* do nothing. */
+        });
+    }
+    setEmail(_) {
+        return __awaiter(this, void 0, void 0, function* () {
+            /* do nothing. */
+        });
+    }
+    setPhoneNumber(_) {
+        return __awaiter(this, void 0, void 0, function* () {
+            /* do nothing. */
+        });
+    }
+    setDayOfBirth(_) {
+        return __awaiter(this, void 0, void 0, function* () {
+            /* do nothing. */
+        });
+    }
+    setMonthOfBirth(_) {
+        return __awaiter(this, void 0, void 0, function* () {
+            /* do nothing. */
+        });
+    }
+    setYearOfBirth(_) {
+        return __awaiter(this, void 0, void 0, function* () {
+            /* do nothing. */
+        });
+    }
+    setCustomKey(_) {
+        return __awaiter(this, void 0, void 0, function* () {
+            /* do nothing. */
+        });
+    }
+    setAttributionWindow(_) {
+        return __awaiter(this, void 0, void 0, function* () {
+            /* do nothing. */
+        });
+    }
+    setClickAttributionWindow(_) {
+        return __awaiter(this, void 0, void 0, function* () {
+            /* do nothing. */
+        });
+    }
 }
-string > {
-    console, : .log(value),
-    return: options
-};
-async;
-start(options, { appid: string });
-Promise < { appid: string } > {
-    return: options
-};
-async;
-setToken(options, { token: string });
-Promise < { token: string } > {
-    return: options
-};
-async;
-log(options, { name: string });
-Promise < { name: string } > {
-    console, : .log(name),
-    return: options
-};
-// Appier
-async;
-configure(_, {
-    appId: string,
-    senderId: string,
-    appGroup: string,
-    isDev: boolean
-});
-Promise < void  > {
-/* do nothing. */
-};
-async;
-setUniversalLinkDomains(_, { domains: string[] });
-Promise < void  > {
-/* do nothing. */
-};
-async;
-logEvent(_, {
-    eventName: string,
-    parameters: unknown,
-    vts: number,
-    vtsCurr: string
-});
-Promise < void  > {
-/* do nothing. */
-};
-async;
-flush();
-Promise < void  > {
-/* do nothing. */
-};
-async;
-setUserId(_, { userId: string });
-Promise < void  > {
-/* do nothing. */
-};
-async;
-setName(_, { name: string });
-Promise < void  > {
-/* do nothing. */
-};
-async;
-setFirstName(_, { firstname: string });
-Promise < void  > {
-/* do nothing. */
-};
-async;
-setLastName(_, { lastname: string });
-Promise < void  > {
-/* do nothing. */
-};
-async;
-setCity(_, { city: string });
-Promise < void  > {
-/* do nothing. */
-};
-async;
-setEmail(_, { email: string });
-Promise < void  > {
-/* do nothing. */
-};
-async;
-setPhoneNumber(_, { phoneNo: string });
-Promise < void  > {
-/* do nothing. */
-};
-async;
-setDayOfBirth(_, { day: number });
-Promise < void  > {
-/* do nothing. */
-};
-async;
-setMonthOfBirth(_, { month: number });
-Promise < void  > {
-/* do nothing. */
-};
-async;
-setYearOfBirth(_, { year: number });
-Promise < void  > {
-/* do nothing. */
-};
-async;
-setCustomKey(_, { key: string, value: unknown });
-Promise < void  > {
-/* do nothing. */
-};
-async;
-setAttributionWindow(_, { seconds: number });
-Promise < void  > {
-/* do nothing. */
-};
-async;
-setClickAttributionWindow(_, { seconds: number });
-Promise < void  > {
-/* do nothing. */
-};
 const HeyAiquaIonicPlugin = new HeyAiquaIonicPluginWeb();
 export { HeyAiquaIonicPlugin };
 import { registerWebPlugin } from '@capacitor/core';
