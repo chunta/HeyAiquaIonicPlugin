@@ -10,7 +10,7 @@ export class HeyAiquaIonicPluginWeb extends WebPlugin implements HeyAiquaIonicPl
   }
 
   // Rex
-  async echo(options: { value: string }): Promise<value: string> {
+  async echo(options: { value: string }): Promise<{value: string}> {
       console.log(value);
       return options;
   }
