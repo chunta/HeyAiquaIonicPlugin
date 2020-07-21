@@ -15,26 +15,90 @@ export class HeyAiquaIonicPluginWeb extends WebPlugin {
             platforms: ['web']
         });
     }
-    echo(_) {
+    // init sdk
+    configure(_) {
         return __awaiter(this, void 0, void 0, function* () {
-            //return options;
-            //console.log(value);
-            // return;
+            /* do nothing. */
         });
     }
-    start(options) {
+    setUniversalLinkDomains(_) {
         return __awaiter(this, void 0, void 0, function* () {
-            return options;
+            /* do nothing. */
         });
     }
-    log(options) {
+    logEvent(_) {
         return __awaiter(this, void 0, void 0, function* () {
-            return options;
+            /* do nothing. */
         });
     }
-    setToken(options) {
+    flush() {
         return __awaiter(this, void 0, void 0, function* () {
-            return options;
+            /* do nothing. */
+        });
+    }
+    setUserId(_) {
+        return __awaiter(this, void 0, void 0, function* () {
+            /* do nothing. */
+        });
+    }
+    setName(_) {
+        return __awaiter(this, void 0, void 0, function* () {
+            /* do nothing. */
+        });
+    }
+    setFirstName(_) {
+        return __awaiter(this, void 0, void 0, function* () {
+            /* do nothing. */
+        });
+    }
+    setLastName(_) {
+        return __awaiter(this, void 0, void 0, function* () {
+            /* do nothing. */
+        });
+    }
+    setCity(_) {
+        return __awaiter(this, void 0, void 0, function* () {
+            /* do nothing. */
+        });
+    }
+    setEmail(_) {
+        return __awaiter(this, void 0, void 0, function* () {
+            /* do nothing. */
+        });
+    }
+    setPhoneNumber(_) {
+        return __awaiter(this, void 0, void 0, function* () {
+            /* do nothing. */
+        });
+    }
+    setDayOfBirth(_) {
+        return __awaiter(this, void 0, void 0, function* () {
+            /* do nothing. */
+        });
+    }
+    setMonthOfBirth(_) {
+        return __awaiter(this, void 0, void 0, function* () {
+            /* do nothing. */
+        });
+    }
+    setYearOfBirth(_) {
+        return __awaiter(this, void 0, void 0, function* () {
+            /* do nothing. */
+        });
+    }
+    setCustomKey(_) {
+        return __awaiter(this, void 0, void 0, function* () {
+            /* do nothing. */
+        });
+    }
+    setAttributionWindow(_) {
+        return __awaiter(this, void 0, void 0, function* () {
+            /* do nothing. */
+        });
+    }
+    setClickAttributionWindow(_) {
+        return __awaiter(this, void 0, void 0, function* () {
+            /* do nothing. */
         });
     }
 }
