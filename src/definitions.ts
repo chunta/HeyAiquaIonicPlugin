@@ -36,6 +36,6 @@ export interface HeyAiquaIonicPluginPlugin {
   setAttributionWindow(options: { seconds: number }): Promise<void>;
   setClickAttributionWindow(options: { seconds: number }): Promise<void>;
 
-  getRecommendationWithScenarioId(options: { scenarioId: string, parameters?: unknown }): Promise<any[]>;
+  getRecommendationWithScenarioId(options: { scenarioId: string, parameters?: unknown }): Promise<unknown[]>;
   //getRecommendationWithScenarioIdAndProductId(options: { scenarioId: string, productId: string, parameters: [string: any] }): Promise<any[]>;
 }

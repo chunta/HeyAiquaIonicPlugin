@@ -62,6 +62,6 @@ export interface HeyAiquaIonicPluginPlugin {
     }): Promise<void>;
     getRecommendationWithScenarioId(options: {
         scenarioId: string;
-        parameters: [string, any];
+        parameters?: unknown;
     }): Promise<any[]>;
 }
