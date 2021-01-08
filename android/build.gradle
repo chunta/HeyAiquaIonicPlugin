@@ -46,6 +46,12 @@ repositories {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':capacitor-android')
+
+    implementation ('com.quantumgraph.sdk:QG:6.7.1') {
+        exclude group: 'com.google.firebase'
+        exclude group: 'com.google.android.gms'
+    }
+
     testImplementation "junit:junit:$junitVersion"
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"

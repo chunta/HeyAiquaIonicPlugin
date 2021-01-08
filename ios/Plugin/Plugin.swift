@@ -194,6 +194,25 @@ public class HeyAiquaIonicPlugin: CAPPlugin {
         QGSdk.getSharedInstance().setClickAttributionWindow(seconds)
         call.resolve();
     }
-    ////
+
+    @objc func getRecommendationWithScenarioId(_ call: CAPPluginCall) {
+
+        if let scenarioId:String = call.getString("scenarioId") as? String, scenarioId.count > 0 {
+
+            let parameters:[String: Any]? = arguments["parameters"] as? [String: Any]
+            QGSdk.getSharedInstance().getRecommendationWithScenarioId(scenarioId, 
+            withQueryParameters: parameters, 
+            withCompletion: { response in
+                call.resolve(response)
+            })
+        } else {
+            call.resolve([])
+        }
+    }
+
+    @objc func getRecommendationWithScenarioIdAndProductId(_ call: CAPPluginCall) {
+
+
+    }
 
 }

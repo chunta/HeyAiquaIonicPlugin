@@ -1,7 +1,7 @@
 
   Pod::Spec.new do |s|
     s.name = 'Heyaiquaionicplugin'
-    s.version = '0.0.41'
+    s.version = '0.0.4'
     s.summary = 'Aiqua Ionic Plugin'
     s.license = 'MIT'
     s.homepage = 'https://github.com/chunta/HeyAiquaIonicPlugin.git'
@@ -10,6 +10,5 @@
     s.source_files = 'ios/Plugin/**/*.{swift,h,m,c,cc,mm,cpp}'
     s.ios.deployment_target  = '11.0'
     s.dependency 'Capacitor'
-    s.dependency 'AIRexLib', '4.1.0'
-    #s.static_framework = true
+    s.dependency 'AppierFramework', '7.5.0'
   end

@@ -6,11 +6,6 @@ declare module "@capacitor/core" {
 
 export interface HeyAiquaIonicPluginPlugin {
 
-  //Rex Utility
-  echo(options: { value: string }): Promise<{value: string}>;
-  setToken(options: { token: string }): Promise<{token: string}>;
-  log(options: { name: string }): Promise<{name: string}>;
-
   // init the Appier Plugin first
   configure(options: {
     appId: string;
@@ -40,4 +35,7 @@ export interface HeyAiquaIonicPluginPlugin {
   setCustomKey(options: { key: string; value: unknown }): Promise<void>;
   setAttributionWindow(options: { seconds: number }): Promise<void>;
   setClickAttributionWindow(options: { seconds: number }): Promise<void>;
+
+  getRecommendationWithScenarioId(options: { scenarioId: string, parameters: [string: any] }): Promise<any[]>;
+  //getRecommendationWithScenarioIdAndProductId(options: { scenarioId: string, productId: string, parameters: [string: any] }): Promise<any[]>;
 }
