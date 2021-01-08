@@ -4,26 +4,6 @@ declare module "@capacitor/core" {
     }
 }
 export interface HeyAiquaIonicPluginPlugin {
-    echo(options: {
-        value: string;
-    }): Promise<{
-        value: string;
-    }>;
-    start(options: {
-        appid: string;
-    }): Promise<{
-        appid: string;
-    }>;
-    setToken(options: {
-        token: string;
-    }): Promise<{
-        token: string;
-    }>;
-    log(options: {
-        name: string;
-    }): Promise<{
-        name: string;
-    }>;
     configure(options: {
         appId: string;
         senderId?: string;
@@ -80,4 +60,8 @@ export interface HeyAiquaIonicPluginPlugin {
     setClickAttributionWindow(options: {
         seconds: number;
     }): Promise<void>;
+    getRecommendationWithScenarioId(options: {
+        scenarioId: string;
+        parameters: [string, any];
+    }): Promise<any[]>;
 }

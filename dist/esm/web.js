@@ -21,11 +21,6 @@ export class HeyAiquaIonicPluginWeb extends WebPlugin {
             return options;
         });
     }
-    start(options) {
-        return __awaiter(this, void 0, void 0, function* () {
-            return options;
-        });
-    }
     setToken(options) {
         return __awaiter(this, void 0, void 0, function* () {
             return options;
@@ -120,6 +115,10 @@ export class HeyAiquaIonicPluginWeb extends WebPlugin {
     setClickAttributionWindow(_) {
         return __awaiter(this, void 0, void 0, function* () {
             /* do nothing. */
+        });
+    }
+    getRecommendationWithScenarioId(_) {
+        return __awaiter(this, void 0, void 0, function* () {
         });
     }
 }

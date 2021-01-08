@@ -87,7 +87,7 @@ export class HeyAiquaIonicPluginWeb extends WebPlugin implements HeyAiquaIonicPl
   async setClickAttributionWindow(_: { seconds: number }): Promise<void> {
     /* do nothing. */
   }
-  async getRecommendationWithScenarioId(_: { scenarioId: string, parameters: [string: any]}): Promise<void> {
+  async getRecommendationWithScenarioId(_: { scenarioId: string, parameters: [string: unknown]}): Promise<void> {
 
   }
 }

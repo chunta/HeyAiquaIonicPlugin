@@ -7,11 +7,6 @@ export declare class HeyAiquaIonicPluginWeb extends WebPlugin implements HeyAiqu
     }): Promise<{
         value: string;
     }>;
-    start(options: {
-        appid: string;
-    }): Promise<{
-        appid: string;
-    }>;
     setToken(options: {
         token: string;
     }): Promise<{
@@ -77,6 +72,10 @@ export declare class HeyAiquaIonicPluginWeb extends WebPlugin implements HeyAiqu
     }): Promise<void>;
     setClickAttributionWindow(_: {
         seconds: number;
+    }): Promise<void>;
+    getRecommendationWithScenarioId(_: {
+        scenarioId: string;
+        parameters: [string, any];
     }): Promise<void>;
 }
 declare const HeyAiquaIonicPlugin: HeyAiquaIonicPluginWeb;
