@@ -61,6 +61,6 @@ export interface HeyAiquaIonicPluginPlugin {
         seconds: number;
     }): Promise<void>;
     disableInAppCampaigns(options: {
-        disabled: boolean;
+        disabled: Boolean;
     }): Promise<void>;
 }
