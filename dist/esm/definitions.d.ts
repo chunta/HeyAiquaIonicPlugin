@@ -60,8 +60,7 @@ export interface HeyAiquaIonicPluginPlugin {
     setClickAttributionWindow(options: {
         seconds: number;
     }): Promise<void>;
-    getRecommendationWithScenarioId(options: {
-        scenarioId: string;
-        parameters?: unknown;
-    }): Promise<unknown[]>;
+    disableInAppCampaigns(options: {
+        disabled: boolean;
+    }): Promise<void>;
 }

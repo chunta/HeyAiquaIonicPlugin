@@ -73,10 +73,9 @@ export declare class HeyAiquaIonicPluginWeb extends WebPlugin implements HeyAiqu
     setClickAttributionWindow(_: {
         seconds: number;
     }): Promise<void>;
-    getRecommendationWithScenarioId(_: {
-        scenarioId: string;
-        parameters?: unknown;
-    }): Promise<unknown[]>;
+    disableInAppCampaigns(_: {
+        disabled: boolean;
+    }): Promise<void>;
 }
 declare const HeyAiquaIonicPlugin: HeyAiquaIonicPluginWeb;
 export { HeyAiquaIonicPlugin };

@@ -195,24 +195,15 @@ public class HeyAiquaIonicPlugin: CAPPlugin {
         call.resolve();
     }
 
-    @objc func getRecommendationWithScenarioId(_ call: CAPPluginCall) {
-
-        if let scenarioId:String = call.getString("scenarioId") as? String, scenarioId.count > 0 {
-
-            let parameters:[String: Any]? = arguments["parameters"] as? [String: Any]
-            QGSdk.getSharedInstance().getRecommendationWithScenarioId(scenarioId, 
-            withQueryParameters: parameters, 
-            withCompletion: { response in
-                call.resolve(response)
-            })
+    @objc func disableInAppCampaigns(_ call: CAPPluginCall) {
+        if let disabled: Bool = call.options["disabled"] as? Bool {
+          print("disableInAppCampaigns:", disabled);
+          QGSdk.getSharedInstance().disableInAppCampaigns(disabled)
         } else {
-            call.resolve([])
+          print("Appier: name should not be nil or empty")
         }
+        call.resolve();
     }
-
-    @objc func getRecommendationWithScenarioIdAndProductId(_ call: CAPPluginCall) {
-
-
-    }
+    
 
 }
