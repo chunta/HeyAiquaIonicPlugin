@@ -176,6 +176,7 @@ public class HeyAiquaIonicPlugin: CAPPlugin {
     }
 
     @objc func getRecommendationWithScenarioId(_ call: CAPPluginCall) {
+        /*
         guard let scenarioId:String = call.options["scenarioId"] as? String else {
             call.reject("Missing scenarioId")
             return
@@ -185,9 +186,21 @@ public class HeyAiquaIonicPlugin: CAPPlugin {
         print("scenarioId -", scenarioId);
         print("productId -", productId);
         print("parameters -", parameters);
-        QGSdk.getSharedInstance().getRecommendationWithScenarioId(scenarioId, 
-        withProductId: productId, 
-        withQueryParameters: parameters, 
+        */
+        let pid = "TEST_SKU_185"
+let dict_i2i = [
+    "filter": [
+    "rules": [[
+    "key": "category",
+    "op": "in",
+    "val": "3C > Mobile > Nokia"
+]]
+]
+]
+let sid = "nTeSNJbvSNGeBqTP4N7ova"
+        QGSdk.getSharedInstance().getRecommendationWithScenarioId(sid, 
+        withProductId: pid, 
+        withQueryParameters: dict_i2i, 
         withCompletionHandler: { response in
             print("raw response:", response)
             guard let finalResponse:[String:Any] = call.options["response"] as? [String:Any] else {
