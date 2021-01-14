@@ -8,36 +8,6 @@ import Appier
 @objc(HeyAiquaIonicPlugin)
 public class HeyAiquaIonicPlugin: CAPPlugin {
 
-    /// Rex Addon
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
-        print("Native Swift", value)
-        call.resolve()
-    }
-
-    @objc func log(_ call: CAPPluginCall) {
-        let name = call.getString("name") ?? ""
-        let parm = call.getObject("parm") ?? [:]
-        print("name", name)
-        DispatchQueue.main.async {
-            QGSdk.getSharedInstance().logEvent(name, withParameters: parm)
-        }
-        call.success([
-            "name": name
-        ])
-    }
-
-    @objc func setToken(_ call: CAPPluginCall) {
-        let token = call.getString("token") ?? ""
-        print("token", token)
-        DispatchQueue.main.async {
-            QGSdk.getSharedInstance().setCustomKey("gcmId", withValue: token)
-        }
-        call.success([
-            "token": token
-        ])
-    }
-
     /// Appier Official
     @objc func configure(_ call: CAPPluginCall) {
         guard let appId = call.options["appId"] as? String else {

@@ -15,23 +15,7 @@ export class HeyAiquaIonicPluginWeb extends WebPlugin {
             platforms: ['web']
         });
     }
-    // Rex
-    echo(options) {
-        return __awaiter(this, void 0, void 0, function* () {
-            return options;
-        });
-    }
-    setToken(options) {
-        return __awaiter(this, void 0, void 0, function* () {
-            return options;
-        });
-    }
-    log(options) {
-        return __awaiter(this, void 0, void 0, function* () {
-            return options;
-        });
-    }
-    // Appier
+    // init sdk
     configure(_) {
         return __awaiter(this, void 0, void 0, function* () {
             /* do nothing. */

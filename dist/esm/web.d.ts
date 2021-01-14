@@ -2,21 +2,6 @@ import { WebPlugin } from '@capacitor/core';
 import { HeyAiquaIonicPluginPlugin } from './definitions';
 export declare class HeyAiquaIonicPluginWeb extends WebPlugin implements HeyAiquaIonicPluginPlugin {
     constructor();
-    echo(options: {
-        value: string;
-    }): Promise<{
-        value: string;
-    }>;
-    setToken(options: {
-        token: string;
-    }): Promise<{
-        token: string;
-    }>;
-    log(options: {
-        name: string;
-    }): Promise<{
-        name: string;
-    }>;
     configure(_: {
         appId: string;
         senderId?: string;

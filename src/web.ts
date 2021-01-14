@@ -9,20 +9,7 @@ export class HeyAiquaIonicPluginWeb extends WebPlugin implements HeyAiquaIonicPl
     });
   }
 
-  // Rex
-  async echo(options: { value: string }): Promise<{value: string}> {
-      return options;
-  }
-
-  async setToken(options: { token: string }): Promise<{token: string}> {
-      return options;
-  }
-
-  async log(options: { name: string }): Promise<{name: string}> {
-     return options;
-  }
-
-  // Appier
+  // init sdk
   async configure(_: {
     appId: string;
     senderId?: string;
