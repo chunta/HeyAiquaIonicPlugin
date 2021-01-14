@@ -174,6 +174,22 @@ public class HeyAiquaIonicPlugin: CAPPlugin {
         QGSdk.getSharedInstance().disable(inAppCampaigns: disabled)
         call.resolve()
     }
-    
 
+    @objc func getRecommendationWithScenarioId(_ call: CAPPluginCall) {
+        guard let scenarioId = call.options["scenarioId"] as? String else {
+            call.reject("Missing scenarioId")
+            return
+        }
+        let productId = call.options["productId"] ?? nil
+        let parameters = call.options["parameters"] ?? nil
+        print("scenarioId -", scenarioId);
+        print("productId -", productId);
+        print("parameters -", parameters);
+        qgsdk.getRecommendationWithScenarioId(scenarioId, 
+        withProductId: productId, 
+        withQueryParameters: parameters, 
+        withCompletionHandler: { response in
+            call.resolve(response)
+        })
+    }
 }

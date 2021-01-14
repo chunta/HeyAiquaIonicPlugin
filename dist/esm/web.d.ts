@@ -61,6 +61,11 @@ export declare class HeyAiquaIonicPluginWeb extends WebPlugin implements HeyAiqu
     disableInAppCampaigns(_: {
         disabled: boolean;
     }): Promise<void>;
+    getRecommendationWithScenarioId(_: {
+        scenarioId: string, 
+        productId?: string, 
+        parameters?: unknown
+    }): Promise<unknown>;
 }
 declare const HeyAiquaIonicPlugin: HeyAiquaIonicPluginWeb;
 export { HeyAiquaIonicPlugin };

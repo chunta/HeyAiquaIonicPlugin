@@ -77,6 +77,9 @@ export class HeyAiquaIonicPluginWeb extends WebPlugin implements HeyAiquaIonicPl
   async disableInAppCampaigns(_: { disabled: boolean }): Promise<void> {
     /* do nothing. */
   }
+  async getRecommendationWithScenarioId(_: { scenarioId: string, productId?: string, parameters?: unknown}): Promise<void> {
+    /* do nothing. */
+  }
 }
 
 const HeyAiquaIonicPlugin = new HeyAiquaIonicPluginWeb();
