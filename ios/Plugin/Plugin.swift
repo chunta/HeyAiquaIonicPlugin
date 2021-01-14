@@ -170,8 +170,9 @@ public class HeyAiquaIonicPlugin: CAPPlugin {
             call.reject("Missing disabled")
             return
         }
+        print("disabled:", disabled)
         QGSdk.getSharedInstance().disable(inAppCampaigns: disabled)
-        call.resolve();
+        call.resolve()
     }
     
 
