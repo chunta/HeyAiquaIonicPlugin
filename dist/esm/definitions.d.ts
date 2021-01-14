@@ -60,5 +60,7 @@ export interface HeyAiquaIonicPluginPlugin {
     setClickAttributionWindow(options: {
         seconds: number;
     }): Promise<void>;
-    disableInAppCampaigns(): Promise<void>;
+    disableInAppCampaigns(options: {
+        disabled: boolean;
+    }): Promise<void>;
 }

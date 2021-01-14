@@ -166,13 +166,11 @@ public class HeyAiquaIonicPlugin: CAPPlugin {
     }
 
     @objc func disableInAppCampaigns(_ call: CAPPluginCall) {
-        /*
          guard let disabled = call.options["disabled"] as? Bool else {
             call.reject("Missing disabled")
             return
         }
         QGSdk.getSharedInstance().disable(inAppCampaigns: disabled)
-        */
         call.resolve();
     }
     

@@ -35,7 +35,7 @@ export interface HeyAiquaIonicPluginPlugin {
   setCustomKey(options: { key: string; value: unknown }): Promise<void>;
   setAttributionWindow(options: { seconds: number }): Promise<void>;
   setClickAttributionWindow(options: { seconds: number }): Promise<void>;
-  disableInAppCampaigns(): Promise<void>;
+  disableInAppCampaigns(options: { disabled: boolean }): Promise<void>;
 
   //getRecommendationWithScenarioId(options: { scenarioId: string, parameters?: unknown }): Promise<unknown>;
   //getRecommendationWithScenarioIdAndProductId(options: { scenarioId: string, productId: string, parameters: [string: any] }): Promise<any[]>;
