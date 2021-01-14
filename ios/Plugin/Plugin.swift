@@ -185,7 +185,7 @@ public class HeyAiquaIonicPlugin: CAPPlugin {
         print("scenarioId -", scenarioId);
         print("productId -", productId);
         print("parameters -", parameters);
-        qgsdk.getRecommendationWithScenarioId(scenarioId, 
+        QGSdk.getSharedInstance().getRecommendationWithScenarioId(scenarioId, 
         withProductId: productId, 
         withQueryParameters: parameters, 
         withCompletionHandler: { response in
