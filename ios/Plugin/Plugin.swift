@@ -176,12 +176,12 @@ public class HeyAiquaIonicPlugin: CAPPlugin {
     }
 
     @objc func getRecommendationWithScenarioId(_ call: CAPPluginCall) {
-        guard let scenarioId = call.options["scenarioId"] as? String else {
+        guard let scenarioId:String = call.options["scenarioId"] as? String else {
             call.reject("Missing scenarioId")
             return
         }
-        let productId = call.options["productId"] ?? nil
-        let parameters = call.options["parameters"] ?? nil
+        let productId:String = (call.options["productId"] as? String) ?? ""
+        let parameters:[String:Any] = (call.options["parameters"] as? [String:Any]) ?? [:]
         print("scenarioId -", scenarioId);
         print("productId -", productId);
         print("parameters -", parameters);
@@ -189,7 +189,12 @@ public class HeyAiquaIonicPlugin: CAPPlugin {
         withProductId: productId, 
         withQueryParameters: parameters, 
         withCompletionHandler: { response in
-            call.resolve(response)
+            guard let finalResponse:[String:Any] = call.options["response"] as? [String:Any] else {
+                call.resolve([:])
+                return
+            }
+            print("response:", finalResponse)
+            call.resolve(finalResponse)
         })
     }
 }
