@@ -74,7 +74,7 @@ export class HeyAiquaIonicPluginWeb extends WebPlugin implements HeyAiquaIonicPl
   async setClickAttributionWindow(_: { seconds: number }): Promise<void> {
     /* do nothing. */
   }
-  async disableInAppCampaigns(_: { disabled: boolean }): Promise<void> {
+  async disableInAppCampaigns(): Promise<void> {
     /* do nothing. */
   }
 }
