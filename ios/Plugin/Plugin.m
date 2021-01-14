@@ -25,4 +25,5 @@ CAP_PLUGIN(HeyAiquaIonicPlugin, "HeyAiquaIonicPlugin",
        CAP_PLUGIN_METHOD(setAttributionWindow, CAPPluginReturnPromise);
        CAP_PLUGIN_METHOD(setClickAttributionWindow, CAPPluginReturnPromise);
        CAP_PLUGIN_METHOD(disableInAppCampaigns, CAPPluginReturnPromise);
+       CAP_PLUGIN_METHOD(getRecommendationWithScenarioId, CAPPluginReturnPromise);
 )
