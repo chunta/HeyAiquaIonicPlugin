@@ -168,7 +168,7 @@ public class HeyAiquaIonicPlugin: CAPPlugin {
     @objc func disableInAppCampaigns(_ call: CAPPluginCall) {
         if let disabled: Bool = call.options["disabled"] as? Bool {
           print("disableInAppCampaigns:", disabled);
-          QGSdk.getSharedInstance().disableInAppCampaigns(disabled)
+          QGSdk.getSharedInstance().disable(inAppCampaigns: disabled)
         } else {
           print("Appier: name should not be nil or empty")
         }
