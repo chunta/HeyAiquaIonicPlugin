@@ -73,5 +73,5 @@ export interface HeyAiquaIonicPluginPlugin {
         modelId: number;
         productId: string;
         recommendationId: string;
-    }): Promise<unknown>;
+    }): Promise<void>;
 }
