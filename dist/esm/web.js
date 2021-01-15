@@ -112,6 +112,11 @@ export class HeyAiquaIonicPluginWeb extends WebPlugin {
             return [];
         });
     }
+    logRecommendationClickedWithScenarioId() {
+        return __awaiter(this, void 0, void 0, function* () {
+            /* do nothing. */
+        });
+    }
 }
 const HeyAiquaIonicPlugin = new HeyAiquaIonicPluginWeb();
 export { HeyAiquaIonicPlugin };

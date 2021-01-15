@@ -176,7 +176,7 @@ public class HeyAiquaIonicPlugin: CAPPlugin {
     }
 
     @objc func getRecommendationWithScenarioId(_ call: CAPPluginCall) {
-        /*
+
         guard let scenarioId:String = call.options["scenarioId"] as? String else {
             call.reject("Missing scenarioId")
             return
@@ -198,10 +198,9 @@ public class HeyAiquaIonicPlugin: CAPPlugin {
             print("response:", finalResponse)
             call.resolve(finalResponse)
         })
-        */
     }
 
     @objc func logRecommendationClickedWithScenarioId(_ call: CAPPluginCall) {
-        
+
     }
  }
