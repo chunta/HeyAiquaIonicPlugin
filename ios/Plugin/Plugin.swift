@@ -190,7 +190,7 @@ public class HeyAiquaIonicPlugin: CAPPlugin {
         withQueryParameters: parameters, 
         withCompletionHandler: { response in
             print("raw response:", response)
-            guard let finalResponse:[String:Any] = call.options["response"] as? [String:Any] else {
+            guard let finalResponse:[String:Any] = response as? [String:Any] else {
                 call.resolve([:])
                 return
             }
