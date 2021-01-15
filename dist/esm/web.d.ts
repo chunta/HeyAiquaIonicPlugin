@@ -63,7 +63,7 @@ export declare class HeyAiquaIonicPluginWeb extends WebPlugin implements HeyAiqu
     }): Promise<void>;
     getRecommendationWithScenarioId(_: {
         scenarioId: string;
-        productId?: string;
+        productId: string;
         parameters?: unknown;
     }): Promise<unknown>;
     logRecommendationClickedWithScenarioId(_: {
