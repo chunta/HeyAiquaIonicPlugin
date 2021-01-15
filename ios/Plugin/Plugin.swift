@@ -177,10 +177,7 @@ public class HeyAiquaIonicPlugin: CAPPlugin {
 
     @objc func getRecommendationWithScenarioId(_ call: CAPPluginCall) {
 
-        guard let scenarioId:String = call.options["scenarioId"] as? String else {
-            call.reject("Missing scenarioId")
-            return
-        }
+        let scenarioId:String = (call.options["scenarioId"] as? String) ?? ""
         let productId:String = (call.options["productId"] as? String) ?? ""
         let parameters:[String:Any] = (call.options["parameters"] as? [String:Any]) ?? [:]
         print("scenarioId -", scenarioId);
@@ -202,6 +199,14 @@ public class HeyAiquaIonicPlugin: CAPPlugin {
 
     @objc func logRecommendationClickedWithScenarioId(_ call: CAPPluginCall) {
 
-        call.resolve("finalResponse")
+        let scenarioId:String = (call.options["scenarioId"] as? String) ?? ""
+        let modelId:Int = (call.options["modelId"] as? Int) ?? 0
+        let productId:String = (call.options["productId"] as? String) ?? ""
+        let recommendationId:String = (call.options["recommendationId"] as? String) ?? ""
+        QGSdk.getSharedInstance().logRecommendationClicked(withScenarioId: scenarioId, 
+        withModelId: modelId, 
+        withProductId: productId, 
+        withRecommendationId: recommendationId)
+        print("Swift logRecommendationClickedWithScenarioId")
     }
  }

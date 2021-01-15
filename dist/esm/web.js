@@ -109,12 +109,13 @@ export class HeyAiquaIonicPluginWeb extends WebPlugin {
     getRecommendationWithScenarioId(_) {
         return __awaiter(this, void 0, void 0, function* () {
             /* do nothing. */
-            //return []
+            return [];
         });
     }
     logRecommendationClickedWithScenarioId() {
         return __awaiter(this, void 0, void 0, function* () {
             /* do nothing. */
+            return "no";
         });
     }
 }

@@ -65,8 +65,20 @@ export interface HeyAiquaIonicPluginPlugin {
     }): Promise<void>;
     getRecommendationWithScenarioId(options: {
         scenarioId: string;
-        productId?: string;
+        productId: string;
         parameters?: unknown;
     }): Promise<unknown>;
-    logRecommendationClickedWithScenarioId(): Promise<string>;
+    logRecommendationClickedWithScenarioId(options: {
+        scenarioId: string;
+        modelId: number;
+        productId: string; 
+        recommendationId: string;
+    }): Promise<void>;
 }
+
+/*
+- (void)logRecommendationClickedWithScenarioId:(NSString *)scenarioId
+                                   withModelId:(long)modelId
+                                 withProductId:(NSString *)productId
+                          withRecommendationId:(NSString *)recommendationId
+*/
