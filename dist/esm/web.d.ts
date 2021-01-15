@@ -66,7 +66,7 @@ export declare class HeyAiquaIonicPluginWeb extends WebPlugin implements HeyAiqu
         productId?: string;
         parameters?: unknown;
     }): Promise<unknown>;
-    logRecommendationClickedWithScenarioId(): Promise<void>;
+    logRecommendationClickedWithScenarioId(): Promise<string>;
 }
 declare const HeyAiquaIonicPlugin: HeyAiquaIonicPluginWeb;
 export { HeyAiquaIonicPlugin };

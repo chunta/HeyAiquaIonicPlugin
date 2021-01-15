@@ -202,5 +202,6 @@ public class HeyAiquaIonicPlugin: CAPPlugin {
 
     @objc func logRecommendationClickedWithScenarioId(_ call: CAPPluginCall) {
 
+        call.resolve("finalResponse")
     }
  }

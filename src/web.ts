@@ -81,8 +81,9 @@ export class HeyAiquaIonicPluginWeb extends WebPlugin implements HeyAiquaIonicPl
     /* do nothing. */
     return []
   }
-  async logRecommendationClickedWithScenarioId(): Promise<void> {
+  async logRecommendationClickedWithScenarioId(): Promise<string> {
     /* do nothing. */
+    return "no"
   }
 }
 

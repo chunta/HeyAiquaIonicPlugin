@@ -68,5 +68,5 @@ export interface HeyAiquaIonicPluginPlugin {
         productId?: string;
         parameters?: unknown;
     }): Promise<unknown>;
-    logRecommendationClickedWithScenarioId(): Promise<void>;
+    logRecommendationClickedWithScenarioId(): Promise<string>;
 }
