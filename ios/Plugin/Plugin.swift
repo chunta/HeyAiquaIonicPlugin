@@ -175,7 +175,7 @@ public class HeyAiquaIonicPlugin: CAPPlugin {
         call.resolve()
     }
 
-    @objc func getRecommendationWithScenarioId(_ call: CAPPluginCallResult) {
+    @objc func getRecommendationWithScenarioId(_ call: CAPPluginCall) {
         /*
         guard let scenarioId:String = call.options["scenarioId"] as? String else {
             call.reject("Missing scenarioId")
