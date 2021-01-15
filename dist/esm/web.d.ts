@@ -72,6 +72,15 @@ export declare class HeyAiquaIonicPluginWeb extends WebPlugin implements HeyAiqu
         productId: string;
         recommendationId: string;
     }): Promise<void>;
+    fetchSavedPushNotifications(): Promise<unknown>;
+    deleteSavedPushNotifications(): Promise<void>;
+    deleteNotificationAtIndex(_: {
+        index: number;
+    }): Promise<void>;
+    enablePushNotificationStorage(): Promise<void>;
+    setPushNotificationStorageLimit(_: {
+        limit: number;
+    }): Promise<void>;
 }
 declare const HeyAiquaIonicPlugin: HeyAiquaIonicPluginWeb;
 export { HeyAiquaIonicPlugin };

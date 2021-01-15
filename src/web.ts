@@ -84,6 +84,10 @@ export class HeyAiquaIonicPluginWeb extends WebPlugin implements HeyAiquaIonicPl
   async logRecommendationClickedWithScenarioId(_: { scenarioId: string, modelId: number, productId: string, recommendationId: string}): Promise<void> {
     /* do nothing. */
   }
+  async fetchSavedPushNotifications(): Promise<unknown> {
+    /* do nothing. */
+    return []
+  }
 }
 
 const HeyAiquaIonicPlugin = new HeyAiquaIonicPluginWeb();

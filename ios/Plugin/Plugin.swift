@@ -208,5 +208,44 @@ public class HeyAiquaIonicPlugin: CAPPlugin {
         withProductId: productId, 
         withRecommendationId: recommendationId)
         print("Swift logRecommendationClickedWithScenarioId")
+        call.resolve()
+    }
+
+    @objc func fetchSavedPushNotifications(_ call: CAPPluginCall) {
+
+        let savedNotification:[Any] = QGSdk.getSharedInstance().fetchSavedPushNotifications()
+        call.resolve(savedNotification)
+    }
+
+    @obj func deleteSavedPushNotifications(_ call: CAPPluginCall) {
+
+        QGSdk.getSharedInstance().deleteSavedPushNotifications()
+        call.resolve()
+    }
+
+    @obj func deleteNotificationAtIndex(_ call: CAPPluginCall) {
+
+        guard let index = call.getInt("index") else {
+            call.reject("Missing index")
+            return
+        }
+        QGSdk.getSharedInstance().deleteNotification(atIndex: index)
+        call.resolve()
+    }
+
+    @obj func enablePushNotificationStorage(_ call: CAPPluginCall) {
+
+        QGSdk.getSharedInstance().enablePushNotificationStorage()
+        call.resolve()
+    }
+
+    @obj func setPushNotificationStorageLimit(_ call: CAPPluginCall) {
+
+        guard let limit = call.getInt("limit") else {
+            call.reject("Missing limit")
+            return
+        }
+        QGSdk.getSharedInstance().setPushNotificationStorageLimit(limit)
+        call.resolve()
     }
  }

@@ -38,4 +38,5 @@ export interface HeyAiquaIonicPluginPlugin {
   disableInAppCampaigns(options: { disabled: boolean }): Promise<void>;
   getRecommendationWithScenarioId(options: { scenarioId: string, productId: string, parameters?: unknown}): Promise<unknown>;
   logRecommendationClickedWithScenarioId(options: { scenarioId: string, modelId: number, productId: string, recommendationId: string;}): Promise<void>;
+  fetchSavedPushNotifications(): Promise<unknown>;
 }
