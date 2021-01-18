@@ -26,7 +26,6 @@ public class HeyAiquaIonicPlugin: CAPPlugin {
     }
 
     @objc func setUniversalLinkDomains(_ call: CAPPluginCall) {
-        //guard let domains = call.getArray("domains", String.self) else {
         guard let domains = call.options["domains"] as? [String] else {
             call.reject("Empty Domains passed")
             return
