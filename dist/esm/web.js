@@ -117,30 +117,11 @@ export class HeyAiquaIonicPluginWeb extends WebPlugin {
             /* do nothing. */
         });
     }
-    fetchSavedPushNotifications(_) {
+    fetchSavedPushNotifications() {
         return __awaiter(this, void 0, void 0, function* () {
             /* do nothing. */
+            return [];
         });
-    }
-    deleteSavedPushNotifications(_) {
-        return __awaiter(this, void 0, void 0, function* () {
-            /* do nothing. */
-        });
-    }
-    deleteNotificationAtIndex(_) {
-        return __awaiter(this, void 0, void 0, function* () {
-            /* do nothing. */
-        });
-    }
-    enablePushNotificationStorage(_) {
-        return __awaiter(this, void 0, void 0, function* () {
-            /* do nothing. */
-        });
-    }
-    setPushNotificationStorageLimit(_) {
-        return __awaiter(this, void 0, void 0, function* () {
-            /* do nothing. */
-        });     
     }
 }
 const HeyAiquaIonicPlugin = new HeyAiquaIonicPluginWeb();
