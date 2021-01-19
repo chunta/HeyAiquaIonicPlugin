@@ -216,13 +216,13 @@ public class HeyAiquaIonicPlugin: CAPPlugin {
         call.resolve(savedNotification)
     }
 
-    @obj func deleteSavedPushNotifications(_ call: CAPPluginCall) {
+    @objc func deleteSavedPushNotifications(_ call: CAPPluginCall) {
 
         QGSdk.getSharedInstance().deleteSavedPushNotifications()
         call.resolve()
     }
 
-    @obj func deleteNotificationAtIndex(_ call: CAPPluginCall) {
+    @objc func deleteNotificationAtIndex(_ call: CAPPluginCall) {
 
         guard let index = call.getInt("index") else {
             call.reject("Missing index")
@@ -232,13 +232,13 @@ public class HeyAiquaIonicPlugin: CAPPlugin {
         call.resolve()
     }
 
-    @obj func enablePushNotificationStorage(_ call: CAPPluginCall) {
+    @objc func enablePushNotificationStorage(_ call: CAPPluginCall) {
 
         QGSdk.getSharedInstance().enablePushNotificationStorage()
         call.resolve()
     }
 
-    @obj func setPushNotificationStorageLimit(_ call: CAPPluginCall) {
+    @objc func setPushNotificationStorageLimit(_ call: CAPPluginCall) {
 
         guard let limit = call.getInt("limit") else {
             call.reject("Missing limit")
