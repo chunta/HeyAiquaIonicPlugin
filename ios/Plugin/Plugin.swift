@@ -213,7 +213,7 @@ public class HeyAiquaIonicPlugin: CAPPlugin {
     @objc func fetchSavedPushNotifications(_ call: CAPPluginCall) {
 
         let savedNotification:[Any] = QGSdk.getSharedInstance().fetchSavedPushNotifications()
-        call.resolve(savedNotification)
+        call.resolve(["data":savedNotification])
     }
 
     @objc func deleteSavedPushNotifications(_ call: CAPPluginCall) {
