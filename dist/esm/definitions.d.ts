@@ -75,4 +75,12 @@ export interface HeyAiquaIonicPluginPlugin {
         recommendationId: string;
     }): Promise<void>;
     fetchSavedPushNotifications(): Promise<unknown>;
+    deleteSavedPushNotifications(): Promise<void>;
+    deleteNotificationAtIndex(option: {
+        index: number;
+    }): Promise<void>;
+    enablePushNotificationStorage(): Promise<void>;
+    setPushNotificationStorageLimit(options: {
+        limit: number;
+    }): Promise<void>;
 }
