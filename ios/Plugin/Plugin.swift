@@ -5,7 +5,7 @@ import Appier
 @objc(HeyAiquaIonicPlugin)
 public class HeyAiquaIonicPlugin: CAPPlugin {
 
-    /// HeyAiqua Official //
+    /// HeyAiqua Official /////
     @objc func configure(_ call: CAPPluginCall) {
         guard let appId = call.options["appId"] as? String else {
             call.reject("Missing AppId")
