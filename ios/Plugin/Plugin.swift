@@ -228,7 +228,7 @@ public class HeyAiquaIonicPlugin: CAPPlugin {
             call.reject("Missing index")
             return
         }
-        QGSdk.getSharedInstance().deleteNotification(atIndex: index)
+        QGSdk.getSharedInstance().deleteNotification(at: UInt(index))
         call.resolve()
     }
 

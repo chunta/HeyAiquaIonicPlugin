@@ -88,6 +88,18 @@ export class HeyAiquaIonicPluginWeb extends WebPlugin implements HeyAiquaIonicPl
     /* do nothing. */
     return []
   }
+  async deleteSavedPushNotifications(): Promise<void> {
+    /* do nothing. */
+  }
+  async deleteNotificationAtIndex(_: {index: number}): Promise<void> {
+    /* do nothing. */
+  }
+  async enablePushNotificationStorage(): Promise<void> {
+    /* do nothing. */
+  }
+  async setPushNotificationStorageLimit(_: {limit: number}): Promise<void> {
+    /* do nothing. */
+  }
 }
 
 const HeyAiquaIonicPlugin = new HeyAiquaIonicPluginWeb();

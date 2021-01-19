@@ -39,4 +39,8 @@ export interface HeyAiquaIonicPluginPlugin {
   getRecommendationWithScenarioId(options: { scenarioId: string, productId: string, parameters?: unknown}): Promise<unknown>;
   logRecommendationClickedWithScenarioId(options: { scenarioId: string, modelId: number, productId: string, recommendationId: string;}): Promise<void>;
   fetchSavedPushNotifications(): Promise<unknown>;
+  deleteSavedPushNotifications(): Promise<unknown>;
+  deleteNotificationAtIndex(option: {index: number}): Promise<void>;
+  enablePushNotificationStorage(): Promise<void>;
+  setPushNotificationStorageLimit(option: {limit: number}): Promise<void>;
 }
